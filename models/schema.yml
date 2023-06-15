@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: customers
+    description: "User model"
+    columns:
+      - name: customer_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: "User creation date and time"
+        tests:
+          - not_null
+      - name: updated_at
+        description: "User update date and time"
+        tests:
+          - not_null
+      - name: deleted_at
+        description: "User deletion date and time"
+      - name: username
+        description: "Used to identify the user"
+        tests:
+          - unique
+          - not_null
+      - name: display_name
+        description: "Used to display on the application"
+        tests:
+          - not_null
+      - name: company
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: country
+        description: "The primary key for this table"
+        tests:
+          - not_null
